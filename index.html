@@ -1550,7 +1550,7 @@ let pendingLeadAction = null;
 
 function getLeadProfile() {
   try {
-    return JSON.parse(localStorage.getItem("nkrToolsLeadProfile") || "null");
+    return JSON.parse(localStorage.getItem("ctcalcLeadProfile") || "null");
   } catch(e) {
     return null;
   }
@@ -1605,7 +1605,7 @@ function saveLeadAndContinue() {
     return;
   }
 
-  localStorage.setItem("nkrToolsLeadProfile", JSON.stringify(profile));
+  localStorage.setItem("ctcalcLeadProfile", JSON.stringify(profile));
   sendLeadToGoogleSheet(profile);
 
   document.getElementById("leadModalOverlay").style.display = "none";
